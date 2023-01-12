@@ -5324,15 +5324,19 @@ function $p_Lchoreo_realisability_WellFormedness$__treeLike__Lchoreo_npomsets_NP
         var _$5$1 = $uI(_$5);
         return p$19$2.allSuccesors__I__sci_Set(_$5$1)
       }))(this$1, p$2))));
-      var $$x1 = this$4.removedAll__sc_IterableOnce__sci_SetOps(_1);
+      var leftSucc = $as_sci_Set(this$4.removedAll__sc_IterableOnce__sci_SetOps(_1));
       var this$5 = $as_sci_SetOps(_2.flatMap__F1__O(new $c_sjsr_AnonFunction1(((this$2$1, p$19$3) => ((_$6) => {
         var _$6$1 = $uI(_$6);
         return p$19$3.allSuccesors__I__sci_Set(_$6$1)
       }))(this$1, p$2))));
-      var sharedSucc = $as_sci_Set($$x1.intersect__sc_Set__sc_SetOps($as_sc_Set(this$5.removedAll__sc_IterableOnce__sci_SetOps(_2))));
-      if ((!sharedSucc.isEmpty__Z())) {
-        var value = (((((("Found shared successor(s) " + $f_sc_IterableOnceOps__mkString__T__T__T__T(sharedSucc, "", ",", "")) + " to choice [") + c$1.Lchoreo_npomsets_NPomset$NChoice__f_left.show__T()) + "] OR [") + c$1.Lchoreo_npomsets_NPomset$NChoice__f_right.show__T()) + "]");
+      var rightSucc = $as_sci_Set(this$5.removedAll__sc_IterableOnce__sci_SetOps(_2));
+      if ((!leftSucc.isEmpty__Z())) {
+        var value = (((("Found successor(s) [" + $f_sc_IterableOnceOps__mkString__T__T__T__T(leftSucc, "", ",", "")) + "] of choice [") + c$1.Lchoreo_npomsets_NPomset$NChoice__f_left.show__T()) + "]");
         throw new $c_sr_NonLocalReturnControl(nonLocalReturnKey3$2, new $c_s_Some(value))
+      };
+      if ((!rightSucc.isEmpty__Z())) {
+        var value$1 = (((("Found successor(s) [" + $f_sc_IterableOnceOps__mkString__T__T__T__T(rightSucc, "", ",", "")) + "] of choice [") + c$1.Lchoreo_npomsets_NPomset$NChoice__f_right.show__T()) + "]");
+        throw new $c_sr_NonLocalReturnControl(nonLocalReturnKey3$2, new $c_s_Some(value$1))
       }
     }))($thiz, p, nonLocalReturnKey3)));
     e.Lchoreo_npomsets_NPomset$Nesting__f_loops.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$2$2, p$3, nonLocalReturnKey3$3) => ((lp) => {
@@ -5340,6 +5344,16 @@ function $p_Lchoreo_realisability_WellFormedness$__treeLike__Lchoreo_npomsets_NP
       var wl = $p_Lchoreo_realisability_WellFormedness$__treeLike__Lchoreo_npomsets_NPomset$Nesting__Lchoreo_npomsets_NPomset__s_Option(this$2$2, lp$1, p$3);
       if ((!wl.isEmpty__Z())) {
         throw new $c_sr_NonLocalReturnControl(nonLocalReturnKey3$3, wl)
+      };
+      var loopEv = lp$1.toSet__sci_Set();
+      var this$9 = $as_sci_SetOps(loopEv.flatMap__F1__O(new $c_sjsr_AnonFunction1(((this$8, p$22$2) => ((_$7) => {
+        var _$7$1 = $uI(_$7);
+        return p$22$2.allSuccesors__I__sci_Set(_$7$1)
+      }))(this$2$2, p$3))));
+      var loopSucc = $as_sci_Set(this$9.removedAll__sc_IterableOnce__sci_SetOps(loopEv));
+      if ((!loopSucc.isEmpty__Z())) {
+        var value$2 = (((("Found successor(s) [" + $f_sc_IterableOnceOps__mkString__T__T__T__T(loopSucc, "", ",", "")) + "] of choice [") + lp$1.show__T()) + "]");
+        throw new $c_sr_NonLocalReturnControl(nonLocalReturnKey3$3, new $c_s_Some(value$2))
       }
     }))($thiz, p, nonLocalReturnKey3)));
     return $m_s_None$()
@@ -5422,9 +5436,9 @@ function $p_Lchoreo_realisability_WellFormedness$__goodPred__I__F1__Lchoreo_npom
         var this$4 = $m_s_Predef$().s_Predef$__f_Set;
         var elems$1 = $m_sr_ScalaRunTime$().wrapIntArray__AI__sci_ArraySeq(new $ac_I(new Int32Array([])));
         return this$4.from__sc_IterableOnce__sci_Set(elems$1)
-      }))($thiz)))).forall__F1__Z(new $c_sjsr_AnonFunction1(((this$3$1, chk$2, p$2) => ((_$7) => {
-        var _$7$1 = $uI(_$7);
-        return $p_Lchoreo_realisability_WellFormedness$__goodPred__I__F1__Lchoreo_npomsets_NPomset__Z(this$3$1, _$7$1, chk$2, p$2)
+      }))($thiz)))).forall__F1__Z(new $c_sjsr_AnonFunction1(((this$3$1, chk$2, p$2) => ((_$8) => {
+        var _$8$1 = $uI(_$8);
+        return $p_Lchoreo_realisability_WellFormedness$__goodPred__I__F1__Lchoreo_npomsets_NPomset__Z(this$3$1, _$8$1, chk$2, p$2)
       }))($thiz, chk, p)))
     } else {
       return false
@@ -5782,25 +5796,25 @@ function $p_Lchoreo_realisability_WellFormedness$__subj$1__Lchoreo_syntax_Choreo
     $m_s_sys_package$().error__T__E("only supports choreographic analysis of labels as single actions")
   }
 }
-function $p_Lchoreo_realisability_WellFormedness$__findAllMatches$1__sci_Map__Lchoreo_npomsets_NPomset__Lchoreo_syntax_Choreo$Out__Lchoreo_syntax_Choreo$In__sci_Set__sci_Set__sci_Map($thiz, succ$1, p$26, out$1, in$1, next, senders) {
+function $p_Lchoreo_realisability_WellFormedness$__findAllMatches$1__sci_Map__Lchoreo_npomsets_NPomset__Lchoreo_syntax_Choreo$Out__Lchoreo_syntax_Choreo$In__sci_Set__sci_Set__sci_Map($thiz, succ$1, p$27, out$1, in$1, next, senders) {
   var next$tailLocal1 = next;
   while (true) {
     var this$1 = next$tailLocal1;
     var x178 = $f_sc_IterableOps__headOption__s_Option(this$1);
     if ((x178 instanceof $c_s_Some)) {
       var x184 = $uI($as_s_Some(x178).s_Some__f_value);
-      if (p$26.Lchoreo_npomsets_NPomset__f_actions.get__O__s_Option(x184).contains__O__Z(out$1)) {
-        var succs = $p_Lchoreo_realisability_WellFormedness$__findAllMatches$1__sci_Map__Lchoreo_npomsets_NPomset__Lchoreo_syntax_Choreo$Out__Lchoreo_syntax_Choreo$In__sci_Set__sci_Set__sci_Map($thiz, succ$1, p$26, out$1, in$1, $as_sci_Set(succ$1.getOrElse__O__F0__O(x184, new $c_sjsr_AnonFunction0(((this$2) => (() => {
+      if (p$27.Lchoreo_npomsets_NPomset__f_actions.get__O__s_Option(x184).contains__O__Z(out$1)) {
+        var succs = $p_Lchoreo_realisability_WellFormedness$__findAllMatches$1__sci_Map__Lchoreo_npomsets_NPomset__Lchoreo_syntax_Choreo$Out__Lchoreo_syntax_Choreo$In__sci_Set__sci_Set__sci_Map($thiz, succ$1, p$27, out$1, in$1, $as_sci_Set(succ$1.getOrElse__O__F0__O(x184, new $c_sjsr_AnonFunction0(((this$2) => (() => {
           var this$3 = $m_s_Predef$().s_Predef$__f_Set;
           var elems = $m_sr_ScalaRunTime$().wrapIntArray__AI__sci_ArraySeq(new $ac_I(new Int32Array([])));
           return this$3.from__sc_IterableOnce__sci_Set(elems)
         }))($thiz)))), $as_sci_Set(senders.incl__O__sci_SetOps(x184)));
         var this$4 = next$tailLocal1;
-        var others = $p_Lchoreo_realisability_WellFormedness$__findAllMatches$1__sci_Map__Lchoreo_npomsets_NPomset__Lchoreo_syntax_Choreo$Out__Lchoreo_syntax_Choreo$In__sci_Set__sci_Set__sci_Map($thiz, succ$1, p$26, out$1, in$1, $as_sci_Set(this$4.excl__O__sci_SetOps(x184)), senders);
+        var others = $p_Lchoreo_realisability_WellFormedness$__findAllMatches$1__sci_Map__Lchoreo_npomsets_NPomset__Lchoreo_syntax_Choreo$Out__Lchoreo_syntax_Choreo$In__sci_Set__sci_Set__sci_Map($thiz, succ$1, p$27, out$1, in$1, $as_sci_Set(this$4.excl__O__sci_SetOps(x184)), senders);
         var this$7 = new $c_Lchoreo_common_MRel$WrapMRel(succs);
         return $m_Lchoreo_common_MRel$().add__sci_Map__sci_Map__sci_Map(others, this$7.Lchoreo_common_MRel$WrapMRel__f_rel)
       };
-      if (p$26.Lchoreo_npomsets_NPomset__f_actions.get__O__s_Option(x184).contains__O__Z(in$1)) {
+      if (p$27.Lchoreo_npomsets_NPomset__f_actions.get__O__s_Option(x184).contains__O__Z(in$1)) {
         var rel = $m_Lchoreo_common_MRel$().mkMR__sci_Seq__sci_Map($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(x184, senders)])));
         var this$15 = new $c_Lchoreo_common_MRel$WrapMRel(rel);
         var this$14 = $as_sc_SetOps(succ$1.getOrElse__O__F0__O(x184, new $c_sjsr_AnonFunction0(((this$2$1) => (() => {
@@ -5810,7 +5824,7 @@ function $p_Lchoreo_realisability_WellFormedness$__findAllMatches$1__sci_Map__Lc
         }))($thiz))));
         var this$13 = next$tailLocal1;
         var that = this$13.excl__O__sci_SetOps(x184);
-        var abs = $p_Lchoreo_realisability_WellFormedness$__findAllMatches$1__sci_Map__Lchoreo_npomsets_NPomset__Lchoreo_syntax_Choreo$Out__Lchoreo_syntax_Choreo$In__sci_Set__sci_Set__sci_Map($thiz, succ$1, p$26, out$1, in$1, $as_sci_Set(this$14.concat__sc_IterableOnce__sc_SetOps(that)), senders);
+        var abs = $p_Lchoreo_realisability_WellFormedness$__findAllMatches$1__sci_Map__Lchoreo_npomsets_NPomset__Lchoreo_syntax_Choreo$Out__Lchoreo_syntax_Choreo$In__sci_Set__sci_Set__sci_Map($thiz, succ$1, p$27, out$1, in$1, $as_sci_Set(this$14.concat__sc_IterableOnce__sc_SetOps(that)), senders);
         return $m_Lchoreo_common_MRel$().add__sci_Map__sci_Map__sci_Map(abs, this$15.Lchoreo_common_MRel$WrapMRel__f_rel)
       };
       var this$18 = $as_sc_SetOps(succ$1.getOrElse__O__F0__O(x184, new $c_sjsr_AnonFunction0(((this$3$1) => (() => {
