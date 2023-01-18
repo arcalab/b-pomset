@@ -15766,7 +15766,7 @@ function $c_Lchoreo_frontend_ICECaos$() {
     var _$2$1 = $as_Lchoreo_syntax_Choreo(_$2);
     return $f_Lchoreo_syntax_Choreo__toString__T(_$2$1)
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x67 = new $c_T2("Choreo Sematnics (without added dependencies for b-pomsets)", y$3);
+  var $$x67 = new $c_T2("Choreo Semantics (without added dependencies for b-pomsets)", y$3);
   var y$4 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$8$1) => ((c) => {
     var c$1 = $as_T2(c);
     var x1 = $m_Lchoreo_realisability_WellFormedness$().checkAll__Lchoreo_npomsets_NPomset__sci_List($p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$8$1, c$1));
