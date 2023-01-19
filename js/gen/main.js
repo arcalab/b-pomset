@@ -15735,13 +15735,13 @@ function $c_Lchoreo_frontend_ICECaos$() {
   var self$8 = new $c_T2("Rd", "// R_d example\n((a->b:x; (b->a:x + b->d:x)) +\n (a->c:x; (c->a:x + c->d:x)));\nd->a:x");
   var $$x38 = $$x39.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$8, "Rd example from the companion journal paper, to exemplify the encoding of choreographies into branching pomsets."));
   var $$x37 = $m_Lcaos_frontend_Configurator$();
-  var self$9 = new $c_T2("Review", "// Review example\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n||\nc->a:t || c->b:t\n\n[4->13,6->13\n,10->15,12->15]");
+  var self$9 = new $c_T2("Review", "// Review example\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n||\nc->a:d || c->b:d\n\n[4->13,6->13\n,10->15,12->15]");
   var $$x36 = $$x37.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$9, "Requesting reviews example: Carol (c) either sends Alice (a) and Bob (b) a review request (r), in which case both Alice and Bob communicate to Carol whether they recommend acceptance (y or n), or she does not (e.g., if the paper can be rejected without any review). In both cases, Carol will thank (t) Alice and Bob when their work is done."));
   var $$x35 = $m_Lcaos_frontend_Configurator$();
   var self$10 = new $c_T2("Review (choreographic)", "// Review variation (choreographic)\n(c->a:r;\n (a->c:y + a->c:n);\n c->a:d\n ||\n c->b:r;\n (b->c:y + b->c:n);\n c->b:d\n) +\nc->a:d || c->b:d");
   var $$x34 = $$x35.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$10, "Variation of the requesting reviews example (with replication to be represented by a choreography): Carol (c) either sends Alice (a) and Bob (b) a review request (r), in which case both Alice and Bob communicate to Carol whether they recommend acceptance (y or n), or she does not (e.g., if the paper can be rejected without any review). In both cases, Carol will thank (t) Alice and Bob when their work is done."));
   var $$x33 = $m_Lcaos_frontend_Configurator$();
-  var self$11 = new $c_T2("Review (stricter)", "// Review example - stricter\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n;\n(c->a:t || c->b:t)");
+  var self$11 = new $c_T2("Review (strict)", "// Review example - stricter\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n;\n(c->a:d || c->b:d)");
   var $$x32 = $$x33.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$11, "Simpler variation of the review process, where Carol (c) waits for both Alice (a) and Bob (b) to reply before sending a confirmation."));
   var $$x31 = $m_Lcaos_frontend_Configurator$();
   var self$12 = new $c_T2("Buyer-seller", "// Buyer-seller protocol\nb1->s:string;\n(s->b1:int;b1->b2:int || s->b2:int);\n(b2->s:ok;b2->s:string;s->b2:date + b2->s:quit)");
@@ -15756,7 +15756,7 @@ function $c_Lchoreo_frontend_ICECaos$() {
   var self$15 = new $c_T2("SS-ill-chan", "// Streaming (bad) variation\n((d->r:bool||k->r:bool);\n r->c:bool)\n||\n((d->r:bool||k->r:bool);\n r->c:bool)");
   var $$x24 = $$x25.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$15, "Ill-channeled version of the simple streaming protocol with parallel sends"));
   var $$x23 = $m_Lcaos_frontend_Configurator$();
-  var self$16 = new $c_T2("MW", "// Master-worker protocol\n(m->w1:t;w1->m:d) ||\n(m->w2:t;w2->m:d)");
+  var self$16 = new $c_T2("MW", "// Master-worker protocol\n(m->w1:d;w1->m:d) ||\n(m->w2:d;w2->m:d)");
   var $$x22 = $$x23.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$16, "Master-Workers protocol"));
   var $$x21 = $m_Lcaos_frontend_Configurator$();
   var self$17 = new $c_T2("DV", "// Distributed voting protocol\n((a->b:y || a->c:y) +\n (a->b:n || a->c:n))   ||\n((b->a:y || b->c:y) +\n (b->a:n || b->c:n))   ||\n((c->a:y || c->b:y) +\n (c->a:n || c->b:n))");
