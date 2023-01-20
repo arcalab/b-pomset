@@ -14700,28 +14700,34 @@ $c_Lcaos_frontend_widgets_SimulateMermaid.prototype.showEnabled__O__V = (functio
   var enabled = this.Lcaos_frontend_widgets_SimulateMermaid__f_simulate.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_sos.next__O__sci_Set(from);
   var ul = this.Lcaos_frontend_widgets_SimulateMermaid__f_left.append__T__Lcaos_frontend_widgets_DomElem("ul").style__T__Lcaos_frontend_widgets_DomElem("list-style-type:none;padding:0;margin:0;");
   ul.append__T__Lcaos_frontend_widgets_DomElem("li").append__T__Lcaos_frontend_widgets_DomElem("span").style__T__Lcaos_frontend_widgets_DomElem("font-weight:bold;").textEl__T__Lcaos_frontend_widgets_DomElem("Enabled transitions:");
-  var p$1 = new $c_sjsr_AnonFunction1(((x$1) => {
+  $m_sci_List$();
+  var this$3 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(enabled);
+  var lt = new $c_sjsr_AnonFunction2(((_$9, _$10) => {
+    var _$9$1 = $as_T2(_$9);
+    var _$10$1 = $as_T2(_$10);
+    var $$x1 = $m_sc_StringOps$();
+    var x = $dp_toString__T(_$9$1.T2__f__1);
+    return $$x1.$less$extension__T__T__Z(x, $dp_toString__T(_$10$1.T2__f__1))
+  }));
+  $as_sc_IterableOps($f_sc_SeqOps__sortWith__F2__O(this$3, lt)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((x$1) => {
     var x$1$1 = $as_T2(x$1);
     return (x$1$1 !== null)
-  }));
-  var this$3 = $ct_sc_IterableOps$WithFilter__sc_IterableOps__F1__(new $c_sc_IterableOps$WithFilter(), enabled, p$1);
-  var f = new $c_sjsr_AnonFunction1(((this$1, ul$2) => ((x$1$2) => {
+  }))).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$4, ul$2) => ((x$1$2) => {
     var x$1$3 = $as_T2(x$1$2);
     matchResult2: {
       if ((x$1$3 !== null)) {
         var a$1 = x$1$3.T2__f__1;
-        var p$2 = x$1$3.T2__f__2;
+        var p$1 = x$1$3.T2__f__2;
         var li = ul$2.append__T__Lcaos_frontend_widgets_DomElem("li");
-        var b = li.append__T__Lcaos_frontend_widgets_DomElem("button").attr__T__T__Lcaos_frontend_widgets_DomElem("title", $dp_toString__T(p$2)).textEl__T__Lcaos_frontend_widgets_DomElem($dp_toString__T(a$1));
-        b.on__T__F0__V("click", new $c_sjsr_AnonFunction0(((this$2, a$2, p$2$1) => (() => {
-          this$2.takeStep__O__O__V(a$2, p$2$1)
-        }))(this$1, a$1, p$2)));
+        var b = li.append__T__Lcaos_frontend_widgets_DomElem("button").attr__T__T__Lcaos_frontend_widgets_DomElem("title", $dp_toString__T(p$1)).textEl__T__Lcaos_frontend_widgets_DomElem($dp_toString__T(a$1));
+        b.on__T__F0__V("click", new $c_sjsr_AnonFunction0(((this$5, a$2, p$2) => (() => {
+          this$5.takeStep__O__O__V(a$2, p$2)
+        }))(this$4, a$1, p$1)));
         break matchResult2
       };
       throw new $c_s_MatchError(x$1$3)
     }
-  }))(this, ul));
-  this$3.filtered__sc_Iterable().foreach__F1__V(f)
+  }))(this, ul)))
 });
 $c_Lcaos_frontend_widgets_SimulateMermaid.prototype.updateSimulationSteps__sci_List__V = (function(sim) {
   if ((!sim.isEmpty__Z())) {
@@ -14949,28 +14955,34 @@ $c_Lcaos_frontend_widgets_SimulateText.prototype.showEnabled__O__V = (function(f
   var enabled = this.Lcaos_frontend_widgets_SimulateText__f_simulate.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_sos.next__O__sci_Set(from);
   var ul = this.Lcaos_frontend_widgets_SimulateText__f_left.append__T__Lcaos_frontend_widgets_DomElem("ul").style__T__Lcaos_frontend_widgets_DomElem("list-style-type:none;padding:0;margin:0;");
   ul.append__T__Lcaos_frontend_widgets_DomElem("li").append__T__Lcaos_frontend_widgets_DomElem("span").style__T__Lcaos_frontend_widgets_DomElem("font-weight:bold;").textEl__T__Lcaos_frontend_widgets_DomElem("Enabled transitions:");
-  var p$1 = new $c_sjsr_AnonFunction1(((x$1) => {
+  $m_sci_List$();
+  var this$3 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(enabled);
+  var lt = new $c_sjsr_AnonFunction2(((_$9, _$10) => {
+    var _$9$1 = $as_T2(_$9);
+    var _$10$1 = $as_T2(_$10);
+    var $$x1 = $m_sc_StringOps$();
+    var x = $dp_toString__T(_$9$1.T2__f__1);
+    return $$x1.$less$extension__T__T__Z(x, $dp_toString__T(_$10$1.T2__f__1))
+  }));
+  $as_sc_IterableOps($f_sc_SeqOps__sortWith__F2__O(this$3, lt)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((x$1) => {
     var x$1$1 = $as_T2(x$1);
     return (x$1$1 !== null)
-  }));
-  var this$3 = $ct_sc_IterableOps$WithFilter__sc_IterableOps__F1__(new $c_sc_IterableOps$WithFilter(), enabled, p$1);
-  var f = new $c_sjsr_AnonFunction1(((this$1, ul$2) => ((x$1$2) => {
+  }))).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$4, ul$2) => ((x$1$2) => {
     var x$1$3 = $as_T2(x$1$2);
     matchResult2: {
       if ((x$1$3 !== null)) {
         var a$1 = x$1$3.T2__f__1;
-        var p$2 = x$1$3.T2__f__2;
+        var p$1 = x$1$3.T2__f__2;
         var li = ul$2.append__T__Lcaos_frontend_widgets_DomElem("li");
-        var b = li.append__T__Lcaos_frontend_widgets_DomElem("button").attr__T__T__Lcaos_frontend_widgets_DomElem("title", $dp_toString__T(p$2)).textEl__T__Lcaos_frontend_widgets_DomElem($dp_toString__T(a$1));
-        b.on__T__F0__V("click", new $c_sjsr_AnonFunction0(((this$2, a$2, p$2$1) => (() => {
-          this$2.takeStep__O__O__V(a$2, p$2$1)
-        }))(this$1, a$1, p$2)));
+        var b = li.append__T__Lcaos_frontend_widgets_DomElem("button").attr__T__T__Lcaos_frontend_widgets_DomElem("title", $dp_toString__T(p$1)).textEl__T__Lcaos_frontend_widgets_DomElem($dp_toString__T(a$1));
+        b.on__T__F0__V("click", new $c_sjsr_AnonFunction0(((this$5, a$2, p$2) => (() => {
+          this$5.takeStep__O__O__V(a$2, p$2)
+        }))(this$4, a$1, p$1)));
         break matchResult2
       };
       throw new $c_s_MatchError(x$1$3)
     }
-  }))(this, ul));
-  this$3.filtered__sc_Iterable().foreach__F1__V(f)
+  }))(this, ul)))
 });
 $c_Lcaos_frontend_widgets_SimulateText.prototype.updateSimulationSteps__sci_List__V = (function(sim) {
   this.Lcaos_frontend_widgets_SimulateText__f_right.text__T__Lcaos_frontend_widgets_DomNode("");
