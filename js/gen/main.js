@@ -4107,7 +4107,7 @@ $c_Lchoreo_common_MRel$.prototype.asPairs__sci_Map__sci_Set = (function(rel) {
   var this$6 = $as_sc_IterableOnceOps($$x1.flatten__F1__O(this$5.s_$less$colon$less$__f_singleton));
   return $m_sci_Set$().from__sc_IterableOnce__sci_Set($as_sc_IterableOnce(this$6))
 });
-$c_Lchoreo_common_MRel$.prototype.closure__sc_Iterable__sci_Map__sci_Map = (function(elems, r) {
+$c_Lchoreo_common_MRel$.prototype.transClosure__sc_Iterable__sci_Map__sci_Map = (function(elems, r) {
   var this$1 = $m_s_Predef$().s_Predef$__f_Map;
   var elems$1 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
   var elem = this$1.from__sc_IterableOnce__sci_Map(elems$1);
@@ -5455,7 +5455,7 @@ function $p_Lchoreo_realisability_WellFormedness$__getChannels__sci_Map__sci_Map
   return $as_sci_Map(res.sr_ObjectRef__f_elem)
 }
 function $p_Lchoreo_realisability_WellFormedness$__relatedOrExclusive__I__I__Lchoreo_npomsets_NPomset__Z($thiz, e1, e2, p) {
-  return ((p.isPred__I__I__sci_Set__Z(e1, e2, p.isPred$default$3__sci_Set()) || p.isPred__I__I__sci_Set__Z(e2, e1, p.isPred$default$3__sci_Set())) || $p_Lchoreo_npomsets_NPomset__isExclusive__I__I__Lchoreo_npomsets_NPomset$Nesting__Z(p, e1, e2, p.Lchoreo_npomsets_NPomset__f_events))
+  return ((p.isPredTrans__I__I__sci_Set__Z(e1, e2, p.isPredTrans$default$3__sci_Set()) || p.isPredTrans__I__I__sci_Set__Z(e2, e1, p.isPredTrans$default$3__sci_Set())) || $p_Lchoreo_npomsets_NPomset__isExclusive__I__I__Lchoreo_npomsets_NPomset$Nesting__Z(p, e1, e2, p.Lchoreo_npomsets_NPomset__f_events))
 }
 function $p_Lchoreo_realisability_WellFormedness$__treeLike__Lchoreo_npomsets_NPomset$Nesting__Lchoreo_npomsets_NPomset__s_Option($thiz, e, p) {
   var nonLocalReturnKey3 = $ct_O__(new $c_O());
@@ -6161,7 +6161,7 @@ $c_Lchoreo_realisability_WellFormedness$.prototype.wellChanneled__Lchoreo_npomse
     $m_Lchoreo_npomsets_NPomset$();
     var events = p.Lchoreo_npomsets_NPomset__f_events;
     var actions = p.Lchoreo_npomsets_NPomset__f_actions;
-    var pred = p.minimizedPred__sci_Map();
+    var pred = $p_Lchoreo_npomsets_NPomset__minimizedPred__sci_Map(p);
     var loop = p.Lchoreo_npomsets_NPomset__f_loop;
     var pm = new $c_Lchoreo_npomsets_NPomset(events, actions, pred, loop);
     var p$1 = new $c_sjsr_AnonFunction1(((this$3$3) => ((x$1$12) => {
@@ -6229,7 +6229,7 @@ $c_Lchoreo_realisability_WellFormedness$.prototype.wellChanneled__Lchoreo_npomse
                     if ((x$1$21 !== null)) {
                       var e2$2 = $uI(x$1$21.T2__f__1);
                       var e4$2 = $uI(x$1$21.T2__f__2);
-                      if ((pm$4$2.isPred__I__I__sci_Set__Z(e1$3$1, e2$2, pm$4$2.isPred$default$3__sci_Set()) && (!pm$4$2.isPred__I__I__sci_Set__Z(e3$3$1, e4$2, pm$4$2.isPred$default$3__sci_Set())))) {
+                      if ((pm$4$2.isPredTrans__I__I__sci_Set__Z(e1$3$1, e2$2, pm$4$2.isPredTrans$default$3__sci_Set()) && (!pm$4$2.isPredTrans__I__I__sci_Set__Z(e3$3$1, e4$2, pm$4$2.isPredTrans$default$3__sci_Set())))) {
                         var value$2 = (((((((("Event " + e1$3$1) + "<") + e2$2) + " but not ") + e3$3$1) + "<") + e4$2) + ".");
                         throw new $c_sr_NonLocalReturnControl(nonLocalReturnKey2$8$2, new $c_s_Some(value$2))
                       };
@@ -6271,7 +6271,7 @@ $c_Lchoreo_realisability_WellFormedness$.prototype.choreographic__Lchoreo_npomse
   $m_Lchoreo_npomsets_NPomset$();
   var events = p.Lchoreo_npomsets_NPomset__f_events;
   var actions = p.Lchoreo_npomsets_NPomset__f_actions;
-  var pred = p.minimizedPred__sci_Map();
+  var pred = $p_Lchoreo_npomsets_NPomset__minimizedPred__sci_Map(p);
   var loop = p.Lchoreo_npomsets_NPomset__f_loop;
   var pMinimized = new $c_Lchoreo_npomsets_NPomset(events, actions, pred, loop);
   p.Lchoreo_npomsets_NPomset__f_events.toSet__sci_Set().foreach__F1__V(new $c_sjsr_AnonFunction1(((this$3, res$2, pMinimized$2) => ((v1) => {
@@ -6709,7 +6709,7 @@ $c_Lchoreo_view_MermaidNPomset$.prototype.apply__Lchoreo_npomsets_NPomset__T = (
   $m_Lchoreo_npomsets_NPomset$();
   var events$1 = this$2.Lchoreo_npomsets_NPomset__f_events;
   var actions$1 = this$2.Lchoreo_npomsets_NPomset__f_actions;
-  var pred$1 = this$2.minimizedPred__sci_Map();
+  var pred$1 = $p_Lchoreo_npomsets_NPomset__minimizedPred__sci_Map(this$2);
   var loop$1 = this$2.Lchoreo_npomsets_NPomset__f_loop;
   var x = (("\n       |flowchart TB\n       | classDef lbl fill:#fff;\n       | " + $p_Lchoreo_view_MermaidNPomset$__mkPomset__Lchoreo_npomsets_NPomset__T(this, new $c_Lchoreo_npomsets_NPomset(events$1, actions$1, pred$1, loop$1))) + "\n       |");
   return $m_sc_StringOps$().stripMargin$extension__T__C__T(x, 124)
@@ -15788,106 +15788,109 @@ function $c_Lchoreo_frontend_ICECaos$() {
     return $m_Lchoreo_DSL$().restrParse__T__T2(code$1)
   }))(this));
   $m_s_package$();
-  var $$x56 = $m_sr_ScalaRunTime$();
+  var $$x58 = $m_sr_ScalaRunTime$();
+  var $$x57 = $m_Lcaos_frontend_Configurator$();
+  var self = new $c_T2("Ra", "// R_a example\na;(b+c);d;e\n[1->2,1->3,2->4,3->5,4->5]");
+  var $$x56 = $$x57.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self, "Ra example from the companion journal paper, to exemplify branching pomset structures."));
   var $$x55 = $m_Lcaos_frontend_Configurator$();
-  var self = new $c_T2("R1", "// R1 example\n(a->b:yes||b->a:yes) +\n(a->b:no||b->a:no)");
-  var $$x54 = $$x55.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self, "R1 example from the companion journal paper. Either both Alice (a) and Bob (b) say 'yes' or they say 'no' to each other. Not realisable."));
+  var self$1 = new $c_T2("Rb", "// R_b example\n((a;(c+d)) +\n (b;(e+f)));\ng;h\n[1->2,1->3,4->5,4->6,\n 2->8,3->7,5->8,6->7]");
+  var $$x54 = $$x55.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$1, "Rb example from the companion journal paper, to exemplify branching pomset structures."));
   var $$x53 = $m_Lcaos_frontend_Configurator$();
-  var self$1 = new $c_T2("R2", "// R2 example\na->b:int;\n((b->a:yes + b->a:no)\n ||\n a->b:bool)");
-  var $$x52 = $$x53.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$1, "R2 example from the companion journal paper. Alice (a) sends a number to Bob (b), and Bob replies both a 'yes/no' answer and a boolean. Realisable."));
+  var self$2 = new $c_T2("Rc", "// R_c example\na->b:x;\n(b->c:x + b->d:x);\nc->d:x");
+  var $$x52 = $$x53.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$2, "Rc example from the companion journal paper, to exemplify the encoding of choreographies into branching pomsets."));
   var $$x51 = $m_Lcaos_frontend_Configurator$();
-  var self$2 = new $c_T2("R3", "// R3 example\na->b:int; || a->b:bool\n[1->3]");
-  var $$x50 = $$x51.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$2, "R3 example from the companion journal paper. Alice (a) sends a number followed by a boolean to Bob (b), and Bob receives these in any order. Not well-formed but realisable."));
+  var self$3 = new $c_T2("Rd", "// R_d example\n((a->b:x; (b->a:x + b->d:x)) +\n (a->c:x; (c->a:x + c->d:x)));\nd->a:x");
+  var $$x50 = $$x51.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$3, "Rd example from the companion journal paper, to exemplify the encoding of choreographies into branching pomsets."));
   var $$x49 = $m_Lcaos_frontend_Configurator$();
-  var self$3 = new $c_T2("R4", "// R4 example\n(a->b:yes + a->b:no);\na->b:int");
-  var $$x48 = $$x49.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$3, "R4 example from the companion journal paper. Alice (a) sends 'yes' or 'no' to Bob (b), and he replies with a number. Not well-formed but realisable."));
+  var self$4 = new $c_T2("Re", "// R_e example\na->b:v || b->a:v\n[1->4,3->2]");
+  var $$x48 = $$x49.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$4, "Rd example from the companion journal paper. Alice (a) and Bob (b) share a vote at the same time."));
   var $$x47 = $m_Lcaos_frontend_Configurator$();
-  var self$4 = new $c_T2("R4 (tree-like)", "// R1 example (tree-like)\n(a->b:yes;a->b:int) +\n(a->b:no; a->b:int)");
-  var $$x46 = $$x47.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$4, "Variation of the R4 example from the companion journal paper, after moving the trailing actions inside the choice. Becomes both well-formed and realisable."));
+  var self$5 = new $c_T2("Rf", "// Rf example\n(a->b:yes||b->a:yes) +\n(a->b:no||b->a:no)");
+  var $$x46 = $$x47.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$5, "Rf example from the companion journal paper. Either both Alice (a) and Bob (b) say 'yes' or they say 'no' to each other. Not realisable."));
   var $$x45 = $m_Lcaos_frontend_Configurator$();
-  var self$5 = new $c_T2("Ra", "// R_a example\na;(b+c);d;e\n[1->2,1->3,2->4,3->5,4->5]");
-  var $$x44 = $$x45.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$5, "Ra example from the companion journal paper, to exemplify branching pomset structures."));
+  var self$6 = new $c_T2("Rg", "// Rg example\na->b:int;\n((b->a:yes + b->a:no)\n ||\n a->b:bool)");
+  var $$x44 = $$x45.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$6, "Rg example from the companion journal paper. Alice (a) sends a number to Bob (b), and Bob replies both a 'yes/no' answer and a boolean. Realisable."));
   var $$x43 = $m_Lcaos_frontend_Configurator$();
-  var self$6 = new $c_T2("Rb", "// R_b example\n((a;(c+d)) +\n (b;(e+f)));\ng;h\n[1->2,1->3,4->5,4->6,\n 2->8,3->7,5->8,6->7]");
-  var $$x42 = $$x43.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$6, "Rb example from the companion journal paper, to exemplify branching pomset structures."));
+  var self$7 = new $c_T2("Rh", "// Rh example\na->b:int; || a->b:bool\n[1->3]");
+  var $$x42 = $$x43.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$7, "Rh example from the companion journal paper. Alice (a) sends a number followed by a boolean to Bob (b), and Bob receives these in any order. Not well-formed but realisable."));
   var $$x41 = $m_Lcaos_frontend_Configurator$();
-  var self$7 = new $c_T2("Rc", "// R_c example\na->b:x;\n(b->c:x + b->d:x);\nc->d:x");
-  var $$x40 = $$x41.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$7, "Rc example from the companion journal paper, to exemplify the encoding of choreographies into branching pomsets."));
+  var self$8 = new $c_T2("Ri", "// Ri example\n(a->b:yes + a->b:no);\na->b:int");
+  var $$x40 = $$x41.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$8, "Ri example from the companion journal paper. Alice (a) sends 'yes' or 'no' to Bob (b), and he replies with a number. Not well-formed but realisable."));
   var $$x39 = $m_Lcaos_frontend_Configurator$();
-  var self$8 = new $c_T2("Rd", "// R_d example\n((a->b:x; (b->a:x + b->d:x)) +\n (a->c:x; (c->a:x + c->d:x)));\nd->a:x");
-  var $$x38 = $$x39.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$8, "Rd example from the companion journal paper, to exemplify the encoding of choreographies into branching pomsets."));
+  var self$9 = new $c_T2("Ri (tree-like)", "// Ri example (tree-like)\n(a->b:yes;a->b:int) +\n(a->b:no; a->b:int)");
+  var $$x38 = $$x39.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$9, "Variation of the Ri example from the companion journal paper, after moving the trailing actions inside the choice. Becomes both well-formed and realisable."));
   var $$x37 = $m_Lcaos_frontend_Configurator$();
-  var self$9 = new $c_T2("Review", "// Review example\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n||\nc->a:d || c->b:d\n\n[4->13,6->13\n,10->15,12->15]");
-  var $$x36 = $$x37.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$9, "Requesting reviews example: Carol (c) either sends Alice (a) and Bob (b) a review request (r), in which case both Alice and Bob communicate to Carol whether they recommend acceptance (y or n), or she does not (e.g., if the paper can be rejected without any review). In both cases, Carol will thank (t) Alice and Bob when their work is done."));
+  var self$10 = new $c_T2("Review", "// Review example\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n||\nc->a:t || c->b:t\n\n[4->13,6->13\n,10->15,12->15]");
+  var $$x36 = $$x37.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$10, "Requesting reviews example: Carol (c) either sends Alice (a) and Bob (b) a review request (r), in which case both Alice and Bob communicate to Carol whether they recommend acceptance (y or n), or she does not (e.g., if the paper can be rejected without any review). In both cases, Carol will thank (t) Alice and Bob when their work is done."));
   var $$x35 = $m_Lcaos_frontend_Configurator$();
-  var self$10 = new $c_T2("Review (choreographic)", "// Review variation (choreographic)\n(c->a:r;\n (a->c:y + a->c:n);\n c->a:d\n ||\n c->b:r;\n (b->c:y + b->c:n);\n c->b:d\n) +\nc->a:d || c->b:d");
-  var $$x34 = $$x35.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$10, "Variation of the requesting reviews example (with replication to be represented by a choreography): Carol (c) either sends Alice (a) and Bob (b) a review request (r), in which case both Alice and Bob communicate to Carol whether they recommend acceptance (y or n), or she does not (e.g., if the paper can be rejected without any review). In both cases, Carol will thank (t) Alice and Bob when their work is done."));
+  var self$11 = new $c_T2("Review (choreographic)", "// Review variation (choreographic)\n(c->a:r;\n (a->c:y + a->c:n);\n c->a:t\n ||\n c->b:r;\n (b->c:y + b->c:n);\n c->b:t\n) +\nc->a:t || c->b:t");
+  var $$x34 = $$x35.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$11, "Variation of the requesting reviews example (with replication to be represented by a choreography): Carol (c) either sends Alice (a) and Bob (b) a review request (r), in which case both Alice and Bob communicate to Carol whether they recommend acceptance (y or n), or she does not (e.g., if the paper can be rejected without any review). In both cases, Carol will thank (t) Alice and Bob when their work is done."));
   var $$x33 = $m_Lcaos_frontend_Configurator$();
-  var self$11 = new $c_T2("Review (strict)", "// Review example - stricter\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n;\n(c->a:d || c->b:d)");
-  var $$x32 = $$x33.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$11, "Simpler variation of the review process, where Carol (c) waits for both Alice (a) and Bob (b) to reply before sending a confirmation."));
+  var self$12 = new $c_T2("Review (strict)", "// Review example - stricter\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n;\n(c->a:t || c->b:t)");
+  var $$x32 = $$x33.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$12, "Simpler variation of the review process, where Carol (c) waits for both Alice (a) and Bob (b) to reply before sending a confirmation."));
   var $$x31 = $m_Lcaos_frontend_Configurator$();
-  var self$12 = new $c_T2("Buyer-seller", "// Buyer-seller protocol\nb1->s:string;\n(s->b1:int;b1->b2:int || s->b2:int);\n(b2->s:ok;b2->s:string;s->b2:date + b2->s:quit)");
-  var $$x30 = $$x31.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$12, "Two-buyers-protocol"));
+  var self$13 = new $c_T2("Buyer-seller", "// Buyer-seller protocol\nb1->s:string;\n(s->b1:int;b1->b2:int || s->b2:int);\n(b2->s:ok;b2->s:string;s->b2:date + b2->s:quit)");
+  var $$x30 = $$x31.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$13, "Two-buyers-protocol"));
   var $$x29 = $m_Lcaos_frontend_Configurator$();
-  var self$13 = new $c_T2("Streaming", "// Simple streaming protocol\n(d->r:bool||k->r:bool);\nr->c:bool;\n(d->r:bool||k->r:bool);\nr->c:bool");
-  var $$x28 = $$x29.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$13, "Simple streaming protocol"));
+  var self$14 = new $c_T2("Streaming", "// Simple streaming protocol\n(d->r:bool||k->r:bool);\nr->c:bool;\n(d->r:bool||k->r:bool);\nr->c:bool");
+  var $$x28 = $$x29.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$14, "Simple streaming protocol"));
   var $$x27 = $m_Lcaos_frontend_Configurator$();
-  var self$14 = new $c_T2("BS-ill-chan", "// Buyer-seller (bad) variation\nb1->s:string;\n(s->b1:int;b1->b2:int || s->b2:int);\n((b2->s:ok||b2->s:string);s->b2:date + b2->s:quit)");
-  var $$x26 = $$x27.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$14, "Ill-channeled version of the buyer-seller protocol with parallel sends"));
+  var self$15 = new $c_T2("BS-ill-chan", "// Buyer-seller (bad) variation\nb1->s:string;\n(s->b1:int;b1->b2:int || s->b2:int);\n((b2->s:ok||b2->s:string);s->b2:date + b2->s:quit)");
+  var $$x26 = $$x27.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$15, "Ill-channeled version of the buyer-seller protocol with parallel sends"));
   var $$x25 = $m_Lcaos_frontend_Configurator$();
-  var self$15 = new $c_T2("SS-ill-chan", "// Streaming (bad) variation\n((d->r:bool||k->r:bool);\n r->c:bool)\n||\n((d->r:bool||k->r:bool);\n r->c:bool)");
-  var $$x24 = $$x25.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$15, "Ill-channeled version of the simple streaming protocol with parallel sends"));
+  var self$16 = new $c_T2("SS-ill-chan", "// Streaming (bad) variation\n((d->r:bool||k->r:bool);\n r->c:bool)\n||\n((d->r:bool||k->r:bool);\n r->c:bool)");
+  var $$x24 = $$x25.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$16, "Ill-channeled version of the simple streaming protocol with parallel sends"));
   var $$x23 = $m_Lcaos_frontend_Configurator$();
-  var self$16 = new $c_T2("MW", "// Master-worker protocol\n(m->w1:d;w1->m:d) ||\n(m->w2:d;w2->m:d)");
-  var $$x22 = $$x23.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$16, "Master-Workers protocol"));
+  var self$17 = new $c_T2("MW", "// Master-worker protocol\n(m->w1:d;w1->m:d) ||\n(m->w2:d;w2->m:d)");
+  var $$x22 = $$x23.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$17, "Master-Workers protocol"));
   var $$x21 = $m_Lcaos_frontend_Configurator$();
-  var self$17 = new $c_T2("DV", "// Distributed voting protocol\n((a->b:y || a->c:y) +\n (a->b:n || a->c:n))   ||\n((b->a:y || b->c:y) +\n (b->a:n || b->c:n))   ||\n((c->a:y || c->b:y) +\n (c->a:n || c->b:n))");
-  var $$x20 = $$x21.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$17, "Distribted Voting protocol with 3 participants"));
+  var self$18 = new $c_T2("DV", "// Distributed voting protocol\n((a->b:y || a->c:y) +\n (a->b:n || a->c:n))   ||\n((b->a:y || b->c:y) +\n (b->a:n || b->c:n))   ||\n((c->a:y || c->b:y) +\n (c->a:n || c->b:n))");
+  var $$x20 = $$x21.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$18, "Distribted Voting protocol with 3 participants"));
   var $$x19 = $m_Lcaos_frontend_Configurator$();
-  var self$18 = new $c_T2("Race", "// Race example\n(\n (ctr->r1: start ||\n  ctr->r2: start);\n (r1->r1:run||\n  r2->r2:run); \n (r1->ctr: finish;r1->r1:rest ||\n  r2->ctr: finish;r2->r2:rest)\n)*");
-  var $$x18 = $$x19.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$18, "Two runners in a race with a controller."));
+  var self$19 = new $c_T2("Race", "// Race example\n(\n (ctr->r1: start ||\n  ctr->r2: start);\n (r1->r1:run||\n  r2->r2:run); \n (r1->ctr: finish;r1->r1:rest ||\n  r2->ctr: finish;r2->r2:rest)\n)*");
+  var $$x18 = $$x19.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$19, "Two runners in a race with a controller."));
   var $$x17 = $m_Lcaos_frontend_Configurator$();
-  var self$19 = new $c_T2("C1", "// c1 example\n(a->b:x + a->c:x);\n(d->b:x + d->e:x)");
-  var $$x16 = $$x17.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$19, "Example of a choreography included in the companion journal paper."));
+  var self$20 = new $c_T2("C1", "// c1 example\n(a->b:x + a->c:x);\n(d->b:x + d->e:x)");
+  var $$x16 = $$x17.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$20, "Example of a choreography included in the companion journal paper."));
   var $$x15 = $m_Lcaos_frontend_Configurator$();
-  var self$20 = new $c_T2("C2", "// c2 example\n(a->b:x + c->b:x)* ||\n(c->a:x + c->b:x)");
-  var $$x14 = $$x15.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$20, "Example of a choreography included in the companion journal paper"));
+  var self$21 = new $c_T2("C2", "// c2 example\n(a->b:x + c->b:x)* ||\n(c->a:x + c->b:x)");
+  var $$x14 = $$x15.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$21, "Example of a choreography included in the companion journal paper"));
   var $$x13 = $m_Lcaos_frontend_Configurator$();
-  var self$21 = new $c_T2("ICE: Fig.5", "// Fig.5 (ICE)\na->b:x;\n(b->c:x+b->d:x);\nc->d:x");
-  var $$x12 = $$x13.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$21, "Example in Fig.5 in the companion ICE 2022 paper."));
+  var self$22 = new $c_T2("ICE: Fig.5", "// Fig.5 (ICE)\na->b:x;\n(b->c:x+b->d:x);\nc->d:x");
+  var $$x12 = $$x13.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$22, "Example in Fig.5 in the companion ICE 2022 paper."));
   var $$x11 = $m_Lcaos_frontend_Configurator$();
-  var self$22 = new $c_T2("ICE: Fig.6", "// Fig.6 (ICE)\n((a->b:x ;(b->a:x + b->d:x))+\n(a->c:x ;(c->a:x + c->d:x))) ; d->a:x");
-  var $$x10 = $$x11.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$22, "Example in Fig.6 in the companion ICE 2022 paper."));
+  var self$23 = new $c_T2("ICE: Fig.6", "// Fig.6 (ICE)\n((a->b:x ;(b->a:x + b->d:x))+\n(a->c:x ;(c->a:x + c->d:x))) ; d->a:x");
+  var $$x10 = $$x11.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$23, "Example in Fig.6 in the companion ICE 2022 paper."));
   var $$x9 = $m_Lcaos_frontend_Configurator$();
-  var self$23 = new $c_T2("ICE: Ex.4.1", "// Example 4.1 (ICE)\na->b:x;\n(b->a:x + b->a:y)");
-  var $$x8 = $$x9.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$23, "Example 4.1 in the companion ICE 2022 paper."));
+  var self$24 = new $c_T2("ICE: Ex.4.1", "// Example 4.1 (ICE)\na->b:x;\n(b->a:x + b->a:y)");
+  var $$x8 = $$x9.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$24, "Example 4.1 in the companion ICE 2022 paper."));
   var $$x7 = $m_Lcaos_frontend_Configurator$();
-  var self$24 = new $c_T2("ICE: Ex.4.2", "// Example 4.1 (ICE)\n(a->b:x ; b->a:x)+\n(a->b:x ; b->a:y)");
-  var $$x6 = $$x7.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$24, "Example 4.2 in the companion ICE 2022 paper."));
+  var self$25 = new $c_T2("ICE: Ex.4.2", "// Example 4.1 (ICE)\n(a->b:x ; b->a:x)+\n(a->b:x ; b->a:y)");
+  var $$x6 = $$x7.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$25, "Example 4.2 in the companion ICE 2022 paper."));
   var $$x5 = $m_Lcaos_frontend_Configurator$();
-  var self$25 = new $c_T2("ICE: Ex.4.3", "// Example 4.1 (ICE)\na->b:x + a->b:x");
-  var $$x4 = $$x5.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$25, "Example 4.3 in the companion ICE 2022 paper."));
+  var self$26 = new $c_T2("ICE: Ex.4.3", "// Example 4.1 (ICE)\na->b:x + a->b:x");
+  var $$x4 = $$x5.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$26, "Example 4.3 in the companion ICE 2022 paper."));
   var $$x3 = $m_Lcaos_frontend_Configurator$();
-  var self$26 = new $c_T2("ATM", "// ATM example\nc->a:auth;\na->b:authReq; (\n\tb->a:denied; a->c:authFailed\n  +\n  b->a:granted;(\n    c->a:quit\n    +\n   \tc->a:checkBalance;\n      (a->c:advert ||\n       (a->c:advert || b->a:getBalance); a->c:balance)\n    +\n    c->a:withdraw; a->b:authWithdrawal;\n      (b->a:allow; a->c:money + b->a:deny; a->c:bye)))");
-  var $$x2 = $$x3.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$26, "ATM example from [Guanciale & Tuosto, Realisability of pomsets, JLAMP 2019]"));
+  var self$27 = new $c_T2("ATM", "// ATM example\nc->a:auth;\na->b:authReq; (\n\tb->a:denied; a->c:authFailed\n  +\n  b->a:granted;(\n    c->a:quit\n    +\n   \tc->a:checkBalance;\n      (a->c:advert ||\n       (a->c:advert || b->a:getBalance); a->c:balance)\n    +\n    c->a:withdraw; a->b:authWithdrawal;\n      (b->a:allow; a->c:money + b->a:deny; a->c:bye)))");
+  var $$x2 = $$x3.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$27, "ATM example from [Guanciale & Tuosto, Realisability of pomsets, JLAMP 2019]"));
   var $$x1 = $m_Lcaos_frontend_Configurator$();
-  var self$27 = new $c_T2("Non-choreo", "// non-choreographic example\na->b:x  || a->b:y || b?a:y\n[1->5,4->5]");
-  var elems = $$x56.wrapRefArray__AO__sci_ArraySeq(new ($d_Lcaos_frontend_Configurator$Example.getArrayOf().constr)([$$x54, $$x52, $$x50, $$x48, $$x46, $$x44, $$x42, $$x40, $$x38, $$x36, $$x34, $$x32, $$x30, $$x28, $$x26, $$x24, $$x22, $$x20, $$x18, $$x16, $$x14, $$x12, $$x10, $$x8, $$x6, $$x4, $$x2, $$x1.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$27, "Illustrative example on how to extend choreographies to produce non-choreographic b-pomsets."))]));
+  var self$28 = new $c_T2("Non-choreo", "// non-choreographic example\na->b:x  || a->b:y || b?a:y\n[1->5,4->5]");
+  var elems = $$x58.wrapRefArray__AO__sci_ArraySeq(new ($d_Lcaos_frontend_Configurator$Example.getArrayOf().constr)([$$x56, $$x54, $$x52, $$x50, $$x48, $$x46, $$x44, $$x42, $$x40, $$x38, $$x36, $$x34, $$x32, $$x30, $$x28, $$x26, $$x24, $$x22, $$x20, $$x18, $$x16, $$x14, $$x12, $$x10, $$x8, $$x6, $$x4, $$x2, $$x1.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$28, "Illustrative example on how to extend choreographies to produce non-choreographic b-pomsets."))]));
   this.Lchoreo_frontend_ICECaos$__f_examples = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
   $m_s_package$();
-  var $$x72 = $m_sr_ScalaRunTime$();
-  var this$116 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$2$1) => ((xc) => {
+  var $$x74 = $m_sr_ScalaRunTime$();
+  var this$120 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$2$1) => ((xc) => {
     var xc$1 = $as_T2(xc);
     return $m_Lchoreo_view_SequenceChart$().apply__Lchoreo_syntax_Choreo__T($as_Lchoreo_syntax_Choreo(xc$1.T2__f__1))
   }))(this)), $m_Lcaos_view_Mermaid$());
-  var y = $f_Lcaos_frontend_widgets_WidgetInfo__moveTo__I__Lcaos_frontend_widgets_WidgetInfo(this$116, 1);
-  var $$x71 = new $c_T2("Sequence Diagram (Choreo only)", y);
-  var this$119 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$3$1) => ((xc$2) => {
+  var y = $f_Lcaos_frontend_widgets_WidgetInfo__moveTo__I__Lcaos_frontend_widgets_WidgetInfo(this$120, 1);
+  var $$x73 = new $c_T2("Sequence Diagram (Choreo only)", y);
+  var this$123 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$3$1) => ((xc$2) => {
     var xc$3 = $as_T2(xc$2);
     return $m_Lchoreo_view_MermaidNPomset$().apply__Lchoreo_npomsets_NPomset__T($p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$3$1, xc$3))
   }))(this)), $m_Lcaos_view_Mermaid$());
-  var y$1 = $f_Lcaos_frontend_widgets_WidgetInfo__expand__Lcaos_frontend_widgets_WidgetInfo(this$119);
-  var $$x70 = new $c_T2("Global B-Pomset", y$1);
+  var y$1 = $f_Lcaos_frontend_widgets_WidgetInfo__expand__Lcaos_frontend_widgets_WidgetInfo(this$123);
+  var $$x72 = new $c_T2("Global B-Pomset", y$1);
   var y$2 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$4$1) => ((xc$3$1) => {
     var xc$4 = $as_T2(xc$3$1);
     return $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$4$1, xc$4)
@@ -15895,7 +15898,7 @@ function $c_Lchoreo_frontend_ICECaos$() {
     var p$1 = $as_Lchoreo_npomsets_NPomset(p);
     return $m_Lchoreo_view_MermaidNPomset$().apply__Lchoreo_npomsets_NPomset__T(p$1)
   }))(this)), $m_Lcaos_view_Mermaid$());
-  var $$x69 = new $c_T2("B-Pomset Semantics", y$2);
+  var $$x71 = new $c_T2("B-Pomset Semantics", y$2);
   var y$3 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$6$1) => ((xc$4$1) => {
     var xc$5 = $as_T2(xc$4$1);
     return $as_Lchoreo_syntax_Choreo(xc$5.T2__f__1)
@@ -15903,7 +15906,7 @@ function $c_Lchoreo_frontend_ICECaos$() {
     var _$2$1 = $as_Lchoreo_syntax_Choreo(_$2);
     return $f_Lchoreo_syntax_Choreo__toString__T(_$2$1)
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x68 = new $c_T2("Choreo Semantics (without added dependencies for b-pomsets)", y$3);
+  var $$x70 = new $c_T2("Choreo Semantics (without added dependencies for b-pomsets)", y$3);
   var y$4 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$8$1) => ((c) => {
     var c$1 = $as_T2(c);
     var x1 = $m_Lchoreo_realisability_WellFormedness$().checkAll__Lchoreo_npomsets_NPomset__sci_List($p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$8$1, c$1));
@@ -15913,31 +15916,31 @@ function $c_Lchoreo_frontend_ICECaos$() {
     };
     return $f_sc_IterableOnceOps__mkString__T__T__T__T(x1, "", "\n", "")
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x67 = new $c_T2("Well-formed", y$4);
-  var $$x65 = $m_Lcaos_frontend_Configurator$();
-  var $$x64 = $m_Lchoreo_npomsets_NPomDefSOS$();
+  var $$x69 = new $c_T2("Well-formed", y$4);
+  var $$x67 = $m_Lcaos_frontend_Configurator$();
+  var $$x66 = $m_Lchoreo_npomsets_NPomDefSOS$();
   var localSOS = $m_Lchoreo_npomsets_NPomDefSOS$();
-  var y$5 = $$x65.compareBranchBisim__Lcaos_sos_SOS__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo($$x64, new $c_Lchoreo_sos_Network$$anon$2(localSOS), new $c_sjsr_AnonFunction1(((this$9$1) => ((xc$5$1) => {
+  var y$5 = $$x67.compareBranchBisim__Lcaos_sos_SOS__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo($$x66, new $c_Lchoreo_sos_Network$$anon$2(localSOS), new $c_sjsr_AnonFunction1(((this$9$1) => ((xc$5$1) => {
     var xc$6 = $as_T2(xc$5$1);
     return $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$9$1, xc$6)
   }))(this)), new $c_sjsr_AnonFunction1(((this$10$1) => ((xc$6$1) => {
     var xc$7 = $as_T2(xc$6$1);
     return $m_Lchoreo_sos_Network$().mkNetCS__O__Lchoreo_projection_Projection__Lchoreo_sos_Network$NetworkCausal($p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$10$1, xc$7), $m_Lchoreo_projection_NPomDefProj$())
   }))(this)), 1000);
-  var $$x66 = new $c_T2("Realisability via bisimulation", y$5);
+  var $$x68 = new $c_T2("Realisability via bisimulation", y$5);
   var y$6 = $m_Lcaos_frontend_Configurator$().viewMerms__F1__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$11$1) => ((xc$7$1) => {
     var xc$8 = $as_T2(xc$7$1);
-    var this$131 = $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$11$1, xc$8).projectMap__sci_Map();
+    var this$135 = $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$11$1, xc$8).projectMap__sci_Map();
     $m_sci_List$();
-    return $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$131).map__F1__sci_List(new $c_sjsr_AnonFunction1(((this$133) => ((x$1) => {
+    return $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$135).map__F1__sci_List(new $c_sjsr_AnonFunction1(((this$137) => ((x$1) => {
       var x$1$1 = $as_T2(x$1);
-      var this$134 = $as_Lchoreo_syntax_Agent(x$1$1.T2__f__1);
-      var _1 = this$134.Lchoreo_syntax_Agent__f_s;
+      var this$138 = $as_Lchoreo_syntax_Agent(x$1$1.T2__f__1);
+      var _1 = this$138.Lchoreo_syntax_Agent__f_s;
       var _2 = $m_Lchoreo_view_MermaidNPomset$().apply__Lchoreo_npomsets_NPomset__T($as_Lchoreo_npomsets_NPomset(x$1$1.T2__f__2));
       return new $c_T2(_1, _2)
     }))(this$11$1)))
   }))(this)));
-  var $$x63 = new $c_T2("Local B-Pomset", y$6);
+  var $$x65 = new $c_T2("Local B-Pomset", y$6);
   var y$7 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$12$1) => ((xc$8$1) => {
     var xc$9 = $as_T2(xc$8$1);
     return $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$12$1, xc$9)
@@ -15948,17 +15951,17 @@ function $c_Lchoreo_frontend_ICECaos$() {
     var _$4$1 = $as_Lchoreo_syntax_Choreo(_$4);
     return $f_Lchoreo_syntax_Choreo__toString__T(_$4$1)
   }))(this)), 80);
-  var $$x62 = new $c_T2("Global LTS", y$7);
+  var $$x64 = new $c_T2("Global LTS", y$7);
   var y$8 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$15$1) => ((xc$9$1) => {
     var xc$10 = $as_T2(xc$9$1);
-    var this$140 = $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$15$1, xc$10);
+    var this$144 = $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$15$1, xc$10);
     $m_Lchoreo_npomsets_NPomset$();
-    var events = this$140.Lchoreo_npomsets_NPomset__f_events;
-    var actions = this$140.Lchoreo_npomsets_NPomset__f_actions;
-    var pred = this$140.minimizedPred__sci_Map();
-    var loop = this$140.Lchoreo_npomsets_NPomset__f_loop;
+    var events = this$144.Lchoreo_npomsets_NPomset__f_events;
+    var actions = this$144.Lchoreo_npomsets_NPomset__f_actions;
+    var pred = $p_Lchoreo_npomsets_NPomset__minimizedPred__sci_Map(this$144);
+    var loop = this$144.Lchoreo_npomsets_NPomset__f_loop;
     var bp = new $c_Lchoreo_npomsets_NPomset(events, actions, pred, loop);
-    var bpstat = ((("BP events: " + bp.Lchoreo_npomsets_NPomset__f_events.toSet__sci_Set().size__I()) + "\nBP dependencies: ") + $as_sc_IterableOnceOps(bp.Lchoreo_npomsets_NPomset__f_pred.map__F1__O(new $c_sjsr_AnonFunction1(((this$142) => ((kv) => {
+    var bpstat = ((("BP events: " + bp.Lchoreo_npomsets_NPomset__f_events.toSet__sci_Set().size__I()) + "\nBP dependencies: ") + $as_sc_IterableOnceOps(bp.Lchoreo_npomsets_NPomset__f_pred.map__F1__O(new $c_sjsr_AnonFunction1(((this$146) => ((kv) => {
       var kv$1 = $as_T2(kv);
       return $as_sc_IterableOnceOps(kv$1.T2__f__2).size__I()
     }))(this$15$1)))).sum__s_math_Numeric__O($m_s_math_Numeric$IntIsIntegral$()));
@@ -15979,42 +15982,42 @@ function $c_Lchoreo_frontend_ICECaos$() {
     var done$2 = $uZ(\u03b41$.T3__f__3);
     return ((!done$2) ? ("Stopped after traversing 2000 states\n" + bpstat) : ((((("States: " + st$2.size__I()) + "\nEdges: ") + eds$2) + "\n") + bpstat))
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x61 = new $c_T2("Global LTS info", y$8);
+  var $$x63 = new $c_T2("Global LTS info", y$8);
   var y$10 = $m_Lcaos_frontend_Configurator$().viewMerms__F1__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$16$1) => ((xc$10$1) => {
     var xc$11 = $as_T2(xc$10$1);
     var ch = $as_Lchoreo_syntax_Choreo(xc$11.T2__f__1);
-    var this$146 = $m_Lchoreo_syntax_Choreo$().agents__Lchoreo_syntax_Choreo__sci_Set(ch);
+    var this$150 = $m_Lchoreo_syntax_Choreo$().agents__Lchoreo_syntax_Choreo__sci_Set(ch);
     $m_sci_List$();
-    var this$150 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$146);
-    var lt = new $c_sjsr_AnonFunction2(((this$148) => ((_$5, _$6) => {
+    var this$154 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$150);
+    var lt = new $c_sjsr_AnonFunction2(((this$152) => ((_$5, _$6) => {
       var _$5$1 = $as_Lchoreo_syntax_Agent(_$5);
       var _$6$1 = $as_Lchoreo_syntax_Agent(_$6);
-      var $$x57 = $m_sc_StringOps$();
+      var $$x59 = $m_sc_StringOps$();
       var x$2 = _$5$1.Lchoreo_syntax_Agent__f_s;
-      return $$x57.$less$extension__T__T__Z(x$2, _$6$1.Lchoreo_syntax_Agent__f_s)
+      return $$x59.$less$extension__T__T__Z(x$2, _$6$1.Lchoreo_syntax_Agent__f_s)
     }))(this$16$1));
-    return $as_sci_List($f_sc_SeqOps__sortWith__F2__O(this$150, lt)).map__F1__sci_List(new $c_sjsr_AnonFunction1(((this$2$2, xc$2$1) => ((a) => {
+    return $as_sci_List($f_sc_SeqOps__sortWith__F2__O(this$154, lt)).map__F1__sci_List(new $c_sjsr_AnonFunction1(((this$2$2, xc$2$1) => ((a) => {
       var a$1 = $as_Lchoreo_syntax_Agent(a);
-      var self$28 = a$1.Lchoreo_syntax_Agent__f_s;
-      var $$x59 = $m_Lcaos_sos_SOS$();
-      var $$x58 = $m_Lchoreo_npomsets_NPomDefSOS$();
+      var self$29 = a$1.Lchoreo_syntax_Agent__f_s;
+      var $$x61 = $m_Lcaos_sos_SOS$();
+      var $$x60 = $m_Lchoreo_npomsets_NPomDefSOS$();
       var p$2 = $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$2$2, xc$2$1);
-      var y$9 = $$x59.toMermaid__Lcaos_sos_SOS__O__F1__F1__I__T($$x58, p$2.project__Lchoreo_syntax_Agent__Lchoreo_npomsets_NPomset(a$1), new $c_sjsr_AnonFunction1(((this$153) => ((_$7) => {
+      var y$9 = $$x61.toMermaid__Lcaos_sos_SOS__O__F1__F1__I__T($$x60, p$2.project__Lchoreo_syntax_Agent__Lchoreo_npomsets_NPomset(a$1), new $c_sjsr_AnonFunction1(((this$157) => ((_$7) => {
         $as_Lchoreo_npomsets_NPomset(_$7);
         return " "
       }))(this$2$2)), new $c_sjsr_AnonFunction1(((this$2$3) => ((_$8) => {
         var _$8$1 = $as_Lchoreo_syntax_Choreo(_$8);
         return $f_Lchoreo_syntax_Choreo__toString__T(_$8$1)
       }))(this$2$2)), 80);
-      return new $c_T2(self$28, y$9)
+      return new $c_T2(self$29, y$9)
     }))(this$16$1, xc$11)))
   }))(this)));
-  var $$x60 = new $c_T2("Local LTS", y$10);
+  var $$x62 = new $c_T2("Local LTS", y$10);
   var y$11 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$17$1) => ((xc$11$1) => {
     var xc$12 = $as_T2(xc$11$1);
-    var this$157 = $m_Lchoreo_analysis_DepGuarded$();
+    var this$161 = $m_Lchoreo_analysis_DepGuarded$();
     var c$2 = $as_Lchoreo_syntax_Choreo(xc$12.T2__f__1);
-    var x6 = this$157.dependentlyGuarded__Lchoreo_syntax_Choreo__s_util_Either(c$2);
+    var x6 = this$161.dependentlyGuarded__Lchoreo_syntax_Choreo__s_util_Either(c$2);
     if ((x6 instanceof $c_s_util_Left)) {
       var value = $as_sci_List($as_s_util_Left(x6).s_util_Left__f_value);
       return ("Not dependently guarded: " + $f_sc_IterableOnceOps__mkString__T__T__T__T(value, "", ", ", ""))
@@ -16024,7 +16027,7 @@ function $c_Lchoreo_frontend_ICECaos$() {
     };
     throw new $c_s_MatchError(x6)
   }))(this)), $m_Lcaos_view_Text$());
-  var elems$1 = $$x72.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x71, $$x70, $$x69, $$x68, $$x67, $$x66, $$x63, $$x62, $$x61, $$x60, new $c_T2("Dependently Guarded (Choreo only)", y$11)]));
+  var elems$1 = $$x74.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x73, $$x72, $$x71, $$x70, $$x69, $$x68, $$x65, $$x64, $$x63, $$x62, new $c_T2("Dependently Guarded (Choreo only)", y$11)]));
   this.Lchoreo_frontend_ICECaos$__f_widgets = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$1)
 }
 $c_Lchoreo_frontend_ICECaos$.prototype = new $h_O();
@@ -26044,6 +26047,46 @@ function $p_Lchoreo_npomsets_NPomset__isExclusive__I__I__Lchoreo_npomsets_NPomse
     }
   }
 }
+function $p_Lchoreo_npomsets_NPomset__minimizedPred__sci_Map($thiz) {
+  var elem = $thiz.Lchoreo_npomsets_NPomset__f_pred;
+  var newPred = new $c_sr_ObjectRef(elem);
+  var this$2 = $thiz.Lchoreo_npomsets_NPomset__f_pred;
+  var p = new $c_sjsr_AnonFunction1(((x$1) => {
+    var x$1$1 = $as_T2(x$1);
+    return ((x$1$1 !== null) && ($uI(x$1$1.T2__f__1), $as_sci_Set(x$1$1.T2__f__2), true))
+  }));
+  var this$11 = new $c_sc_MapOps$WithFilter(this$2, p);
+  var f$1 = new $c_sjsr_AnonFunction1(((this$3, newPred$2) => ((x$1$2) => {
+    var x$1$3 = $as_T2(x$1$2);
+    matchResult16: {
+      if ((x$1$3 !== null)) {
+        var e$1 = $uI(x$1$3.T2__f__1);
+        var pes$1 = $as_sci_Set(x$1$3.T2__f__2);
+        var p$1 = new $c_sjsr_AnonFunction1(((this$4, pes$2) => ((pe) => {
+          var pe$1 = $uI(pe);
+          return $as_sc_SetOps(pes$2.excl__O__sci_SetOps(pe$1).flatMap__F1__O(new $c_sjsr_AnonFunction1(((this$5) => ((e$2) => {
+            var e$3 = $uI(e$2);
+            return this$5.allRealPred__I__sci_Set(e$3)
+          }))(this$4)))).contains__O__Z(pe$1)
+        }))(this$3, pes$1));
+        var this$10 = $ct_sc_IterableOps$WithFilter__sc_IterableOps__F1__(new $c_sc_IterableOps$WithFilter(), pes$1, p$1);
+        var f = new $c_sjsr_AnonFunction1(((newPred$3$2, e$2$1) => ((v1) => {
+          var pe$2 = $uI(v1);
+          var this$9 = $as_sci_Map(newPred$3$2.sr_ObjectRef__f_elem);
+          var this$7 = $as_sci_SetOps($as_sci_Map(newPred$3$2.sr_ObjectRef__f_elem).apply__O__O(e$2$1));
+          var y = this$7.excl__O__sci_SetOps(pe$2);
+          var ev$24 = $as_sci_Map(this$9.updated__O__O__sci_MapOps(e$2$1, y));
+          newPred$3$2.sr_ObjectRef__f_elem = ev$24
+        }))(newPred$2, e$1));
+        this$10.filtered__sc_Iterable().foreach__F1__V(f);
+        break matchResult16
+      };
+      throw new $c_s_MatchError(x$1$3)
+    }
+  }))($thiz, newPred));
+  this$11.filtered__sc_Iterable().foreach__F1__V(f$1);
+  return $as_sci_Map(newPred.sr_ObjectRef__f_elem)
+}
 function $p_Lchoreo_npomsets_NPomset__selectChoice__I__Lchoreo_npomsets_NPomset$NChoice__I__T4($thiz, e, c, seed) {
   var x214 = $thiz.select__I__Lchoreo_npomsets_NPomset$Nesting__I__s_Option(e, c.Lchoreo_npomsets_NPomset$NChoice__f_left, seed);
   if ((x214 instanceof $c_s_Some)) {
@@ -26565,17 +26608,17 @@ $c_Lchoreo_npomsets_NPomset.prototype.allRealPred__I__sci_Set = (function(e) {
   }))(this))));
   return $as_sci_Set(next.concat__sc_IterableOnce__sc_SetOps(that))
 });
-$c_Lchoreo_npomsets_NPomset.prototype.isPred__I__I__sci_Set__Z = (function(e1, e2, hist) {
+$c_Lchoreo_npomsets_NPomset.prototype.isPredTrans__I__I__sci_Set__Z = (function(e1, e2, hist) {
   return ((e1 === e2) || ((!hist.contains__O__Z(e2)) && $as_sc_IterableOnceOps(this.Lchoreo_npomsets_NPomset__f_pred.getOrElse__O__F0__O(e2, new $c_sjsr_AnonFunction0((() => {
     var this$1 = $m_s_Predef$().s_Predef$__f_Set;
     var elems = $m_sr_ScalaRunTime$().wrapIntArray__AI__sci_ArraySeq(new $ac_I(new Int32Array([])));
     return this$1.from__sc_IterableOnce__sci_Set(elems)
   })))).exists__F1__Z(new $c_sjsr_AnonFunction1(((this$2, e1$2, e2$2, hist$2) => ((e2b) => {
     var e2b$1 = $uI(e2b);
-    return this$2.isPred__I__I__sci_Set__Z(e1$2, e2b$1, $as_sci_Set(hist$2.incl__O__sci_SetOps(e2$2)))
+    return this$2.isPredTrans__I__I__sci_Set__Z(e1$2, e2b$1, $as_sci_Set(hist$2.incl__O__sci_SetOps(e2$2)))
   }))(this, e1, e2, hist)))))
 });
-$c_Lchoreo_npomsets_NPomset.prototype.isPred$default$3__sci_Set = (function() {
+$c_Lchoreo_npomsets_NPomset.prototype.isPredTrans$default$3__sci_Set = (function() {
   var this$1 = $m_s_Predef$().s_Predef$__f_Set;
   var elems = $m_sr_ScalaRunTime$().wrapIntArray__AI__sci_ArraySeq(new $ac_I(new Int32Array([])));
   return this$1.from__sc_IterableOnce__sci_Set(elems)
@@ -26613,46 +26656,6 @@ $c_Lchoreo_npomsets_NPomset.prototype.reducedPred__sci_Map = (function() {
   }))(this, newPred)));
   return $as_sci_Map(newPred.sr_ObjectRef__f_elem)
 });
-$c_Lchoreo_npomsets_NPomset.prototype.minimizedPred__sci_Map = (function() {
-  var elem = this.Lchoreo_npomsets_NPomset__f_pred;
-  var newPred = new $c_sr_ObjectRef(elem);
-  var this$2 = this.Lchoreo_npomsets_NPomset__f_pred;
-  var p = new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_T2(x$1);
-    return ((x$1$1 !== null) && ($uI(x$1$1.T2__f__1), $as_sci_Set(x$1$1.T2__f__2), true))
-  }));
-  var this$11 = new $c_sc_MapOps$WithFilter(this$2, p);
-  var f$1 = new $c_sjsr_AnonFunction1(((this$3, newPred$2) => ((x$1$2) => {
-    var x$1$3 = $as_T2(x$1$2);
-    matchResult16: {
-      if ((x$1$3 !== null)) {
-        var e$1 = $uI(x$1$3.T2__f__1);
-        var pes$1 = $as_sci_Set(x$1$3.T2__f__2);
-        var p$1 = new $c_sjsr_AnonFunction1(((this$4, pes$2) => ((pe) => {
-          var pe$1 = $uI(pe);
-          return $as_sc_SetOps(pes$2.excl__O__sci_SetOps(pe$1).flatMap__F1__O(new $c_sjsr_AnonFunction1(((this$5) => ((e$2) => {
-            var e$3 = $uI(e$2);
-            return this$5.allRealPred__I__sci_Set(e$3)
-          }))(this$4)))).contains__O__Z(pe$1)
-        }))(this$3, pes$1));
-        var this$10 = $ct_sc_IterableOps$WithFilter__sc_IterableOps__F1__(new $c_sc_IterableOps$WithFilter(), pes$1, p$1);
-        var f = new $c_sjsr_AnonFunction1(((newPred$3$2, e$2$1) => ((v1) => {
-          var pe$2 = $uI(v1);
-          var this$9 = $as_sci_Map(newPred$3$2.sr_ObjectRef__f_elem);
-          var this$7 = $as_sci_SetOps($as_sci_Map(newPred$3$2.sr_ObjectRef__f_elem).apply__O__O(e$2$1));
-          var y = this$7.excl__O__sci_SetOps(pe$2);
-          var ev$24 = $as_sci_Map(this$9.updated__O__O__sci_MapOps(e$2$1, y));
-          newPred$3$2.sr_ObjectRef__f_elem = ev$24
-        }))(newPred$2, e$1));
-        this$10.filtered__sc_Iterable().foreach__F1__V(f);
-        break matchResult16
-      };
-      throw new $c_s_MatchError(x$1$3)
-    }
-  }))(this, newPred));
-  this$11.filtered__sc_Iterable().foreach__F1__V(f$1);
-  return $as_sci_Map(newPred.sr_ObjectRef__f_elem)
-});
 $c_Lchoreo_npomsets_NPomset.prototype.simplifiedFull__Lchoreo_npomsets_NPomset = (function() {
   $m_Lchoreo_npomsets_NPomset$();
   var events = this.Lchoreo_npomsets_NPomset__f_events;
@@ -26663,11 +26666,11 @@ $c_Lchoreo_npomsets_NPomset.prototype.simplifiedFull__Lchoreo_npomsets_NPomset =
   $m_Lchoreo_npomsets_NPomset$();
   var events$1 = this$2.Lchoreo_npomsets_NPomset__f_events;
   var actions$1 = this$2.Lchoreo_npomsets_NPomset__f_actions;
-  var pred$1 = this$2.minimizedPred__sci_Map();
+  var pred$1 = $p_Lchoreo_npomsets_NPomset__minimizedPred__sci_Map(this$2);
   var loop$1 = this$2.Lchoreo_npomsets_NPomset__f_loop;
   var s = new $c_Lchoreo_npomsets_NPomset(events$1, actions$1, pred$1, loop$1);
   var es = this.Lchoreo_npomsets_NPomset__f_events.toSet__sci_Set();
-  var npred = $m_Lchoreo_common_MRel$().closure__sc_Iterable__sci_Map__sci_Map(es, s.Lchoreo_npomsets_NPomset__f_pred);
+  var npred = $m_Lchoreo_common_MRel$().transClosure__sc_Iterable__sci_Map__sci_Map(es, s.Lchoreo_npomsets_NPomset__f_pred);
   $m_Lchoreo_npomsets_NPomset$();
   var events$2 = s.Lchoreo_npomsets_NPomset__f_events;
   var actions$2 = $as_sci_Map(this.Lchoreo_npomsets_NPomset__f_actions.filter__F1__O(new $c_sjsr_AnonFunction1(((es$2) => ((kv) => {
