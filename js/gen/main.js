@@ -15808,7 +15808,7 @@ function $c_Lchoreo_frontend_ICECaos$() {
   var self$9 = new $c_T2("Ri (tree-like)", "// Ri example (tree-like)\n(a->b:yes;a->b:int) +\n(a->b:no; a->b:int)");
   var $$x38 = $$x39.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$9, "Variation of the Ri example from the companion journal paper, after moving the trailing actions inside the choice. Becomes both well-formed and realisable."));
   var $$x37 = $m_Lcaos_frontend_Configurator$();
-  var self$10 = new $c_T2("Review", "// Review example\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n||\nc->a:t || c->b:t\n\n[4->13,6->13\n,10->15,12->15]");
+  var self$10 = new $c_T2("Review", "// Review example\n((c->a:r;\n (a->c:y+a->c:n) ||\n c->b:r;\n (b->c:y+b->c:n)\n) + 1)\n||\nc->a:t || c->b:t\n\n[1->13,2->14,4->13,\n 6->13,7->15,8->16,\n 10->15,12->15]");
   var $$x36 = $$x37.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$10, "Requesting reviews example: Carol (c) either sends Alice (a) and Bob (b) a review request (r), in which case both Alice and Bob communicate to Carol whether they recommend acceptance (y or n), or she does not (e.g., if the paper can be rejected without any review). In both cases, Carol will thank (t) Alice and Bob when their work is done."));
   var $$x35 = $m_Lcaos_frontend_Configurator$();
   var self$11 = new $c_T2("Review (choreographic)", "// Review variation (choreographic)\n(c->a:r;\n (a->c:y + a->c:n);\n c->a:t\n ||\n c->b:r;\n (b->c:y + b->c:n);\n c->b:t\n) +\nc->a:t || c->b:t");
@@ -15942,14 +15942,8 @@ function $c_Lchoreo_frontend_ICECaos$() {
   var $$x64 = new $c_T2("Global LTS", y$7);
   var y$8 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$15$1) => ((xc$9$1) => {
     var xc$10 = $as_T2(xc$9$1);
-    var this$144 = $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$15$1, xc$10);
-    $m_Lchoreo_npomsets_NPomset$();
-    var events = this$144.Lchoreo_npomsets_NPomset__f_events;
-    var actions = this$144.Lchoreo_npomsets_NPomset__f_actions;
-    var pred = $p_Lchoreo_npomsets_NPomset__minimizedPred__sci_Map(this$144);
-    var loop = this$144.Lchoreo_npomsets_NPomset__f_loop;
-    var bp = new $c_Lchoreo_npomsets_NPomset(events, actions, pred, loop);
-    var bpstat = ((("BP events: " + bp.Lchoreo_npomsets_NPomset__f_events.toSet__sci_Set().size__I()) + "\nBP dependencies: ") + $as_sc_IterableOnceOps(bp.Lchoreo_npomsets_NPomset__f_pred.map__F1__O(new $c_sjsr_AnonFunction1(((this$146) => ((kv) => {
+    var bp = $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$15$1, xc$10);
+    var bpstat = ((("BP events: " + bp.Lchoreo_npomsets_NPomset__f_events.toSet__sci_Set().size__I()) + "\nBP dependencies: ") + $as_sc_IterableOnceOps(bp.Lchoreo_npomsets_NPomset__f_pred.map__F1__O(new $c_sjsr_AnonFunction1(((this$144) => ((kv) => {
       var kv$1 = $as_T2(kv);
       return $as_sc_IterableOnceOps(kv$1.T2__f__2).size__I()
     }))(this$15$1)))).sum__s_math_Numeric__O($m_s_math_Numeric$IntIsIntegral$()));
@@ -15974,23 +15968,23 @@ function $c_Lchoreo_frontend_ICECaos$() {
   var y$10 = $m_Lcaos_frontend_Configurator$().viewMerms__F1__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$16$1) => ((xc$10$1) => {
     var xc$11 = $as_T2(xc$10$1);
     var ch = $as_Lchoreo_syntax_Choreo(xc$11.T2__f__1);
-    var this$150 = $m_Lchoreo_syntax_Choreo$().agents__Lchoreo_syntax_Choreo__sci_Set(ch);
+    var this$148 = $m_Lchoreo_syntax_Choreo$().agents__Lchoreo_syntax_Choreo__sci_Set(ch);
     $m_sci_List$();
-    var this$154 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$150);
-    var lt = new $c_sjsr_AnonFunction2(((this$152) => ((_$6, _$7) => {
+    var this$152 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$148);
+    var lt = new $c_sjsr_AnonFunction2(((this$150) => ((_$6, _$7) => {
       var _$6$1 = $as_Lchoreo_syntax_Agent(_$6);
       var _$7$1 = $as_Lchoreo_syntax_Agent(_$7);
       var $$x59 = $m_sc_StringOps$();
       var x$2 = _$6$1.Lchoreo_syntax_Agent__f_s;
       return $$x59.$less$extension__T__T__Z(x$2, _$7$1.Lchoreo_syntax_Agent__f_s)
     }))(this$16$1));
-    return $as_sci_List($f_sc_SeqOps__sortWith__F2__O(this$154, lt)).map__F1__sci_List(new $c_sjsr_AnonFunction1(((this$2$2, xc$2$1) => ((a) => {
+    return $as_sci_List($f_sc_SeqOps__sortWith__F2__O(this$152, lt)).map__F1__sci_List(new $c_sjsr_AnonFunction1(((this$2$2, xc$2$1) => ((a) => {
       var a$1 = $as_Lchoreo_syntax_Agent(a);
       var self$29 = a$1.Lchoreo_syntax_Agent__f_s;
       var $$x61 = $m_Lcaos_sos_SOS$();
       var $$x60 = $m_Lchoreo_npomsets_NPomDefSOS$();
       var p$2 = $p_Lchoreo_frontend_ICECaos$__chor2npom__T2__Lchoreo_npomsets_NPomset(this$2$2, xc$2$1);
-      var y$9 = $$x61.toMermaid__Lcaos_sos_SOS__O__F1__F1__I__T($$x60, p$2.project__Lchoreo_syntax_Agent__Lchoreo_npomsets_NPomset(a$1), new $c_sjsr_AnonFunction1(((this$157) => ((_$8) => {
+      var y$9 = $$x61.toMermaid__Lcaos_sos_SOS__O__F1__F1__I__T($$x60, p$2.project__Lchoreo_syntax_Agent__Lchoreo_npomsets_NPomset(a$1), new $c_sjsr_AnonFunction1(((this$155) => ((_$8) => {
         $as_Lchoreo_npomsets_NPomset(_$8);
         return " "
       }))(this$2$2)), new $c_sjsr_AnonFunction1(((this$2$3) => ((_$9) => {
@@ -16003,9 +15997,9 @@ function $c_Lchoreo_frontend_ICECaos$() {
   var $$x62 = new $c_T2("Local LTS", y$10);
   var y$11 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$17$1) => ((xc$11$1) => {
     var xc$12 = $as_T2(xc$11$1);
-    var this$161 = $m_Lchoreo_analysis_DepGuarded$();
+    var this$159 = $m_Lchoreo_analysis_DepGuarded$();
     var c$2 = $as_Lchoreo_syntax_Choreo(xc$12.T2__f__1);
-    var x6 = this$161.dependentlyGuarded__Lchoreo_syntax_Choreo__s_util_Either(c$2);
+    var x6 = this$159.dependentlyGuarded__Lchoreo_syntax_Choreo__s_util_Either(c$2);
     if ((x6 instanceof $c_s_util_Left)) {
       var value = $as_sci_List($as_s_util_Left(x6).s_util_Left__f_value);
       return ("Not dependently guarded: " + $f_sc_IterableOnceOps__mkString__T__T__T__T(value, "", ", ", ""))
