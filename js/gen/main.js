@@ -15781,7 +15781,7 @@ function $c_Lchoreo_frontend_ICECaos$() {
   var self = new $c_T2("Ra", "// R_a example\na;(b+c);d;e\n[1->2,1->3,2->4,3->5,4->5]");
   var $$x56 = $$x57.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self, "Ra example from the companion journal paper, to exemplify branching pomset structures."));
   var $$x55 = $m_Lcaos_frontend_Configurator$();
-  var self$1 = new $c_T2("Rb", "// R_b example\n((a;(c+d)) +\n (b;(e+f)));\ng;h\n[1->2,1->3,4->5,4->6,\n 2->8,3->7,5->8,6->7]");
+  var self$1 = new $c_T2("Rb", "// R_b example\n((a;(c+d)) +\n (b;(e+f)));\ng;h\n[1->2,1->3,4->5,4->6,\n 2->8,3->7,5->8,6->7,\n 7->8]");
   var $$x54 = $$x55.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$1, "Rb example from the companion journal paper, to exemplify branching pomset structures."));
   var $$x53 = $m_Lcaos_frontend_Configurator$();
   var self$2 = new $c_T2("Rc", "// R_c example\na->b:x;\n(b->c:x + b->d:x);\nc->d:x");
